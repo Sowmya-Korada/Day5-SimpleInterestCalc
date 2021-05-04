@@ -18,7 +18,10 @@
                f.sim.value="Not Valid Input";
             }
             else{
-                f.sim.value=si
+                f.sim.value=si;
+                f.principal.value=" ";
+                f.rate.value=" ";
+                f.time.value=" ";
             }
            
         }
@@ -33,7 +36,7 @@
             <div class="form-group col-sm-5 col-md-6 col-lg-4" > 
                 <h1 class="text-center" style="font-family: ARIAL NARROW;">Simple Interest Calculator</h1>
                 <div >
-                <form >
+                <form autocomplete="off">
                     <table class="table table-borderless  table-responsive-xs table-sm">
                         <tr>
                             <th><label for="prin" class="h5">Principal:</label></th>
