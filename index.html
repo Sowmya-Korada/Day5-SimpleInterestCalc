@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Interest Calculator</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <script type="text/javascript">
+        var p,t,r,si;
+        function calc(f){
+            p=parseFloat(f.principal.value);
+            r=parseFloat(f.rate.value);
+            t=parseFloat(f.time.value);
+            si=(p*r*t)/100;
+            if(isNaN(si)){
+               f.sim.value="Not Valid Input";
+            }
+            else{
+                f.sim.value=si
+            }
+           
+        }
+    </script>
+
+</head>
+<body>
+    <h1 class="text-center" >SIMPLE INTEREST</h1>
+    <br>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="form-group col-sm-5 col-md-6 col-lg-4 " > 
+                <h1 class="text-center" style="font-family: ARIAL NARROW;">Simple Interest Calculator</h1>
+                <div >
+                <form >
+                    <table class="table table-borderless  table-responsive-xs table-sm">
+                        <tr>
+                            <th><label for="prin">Principal:</label></th>
+                            <td><input type="text" class="form-control" name="principal" id="prin" placeholder="Enter the principal amount" ></td>
+                        </tr>
+                        <tr>
+                            <th><label for="rate">Rate:</label></th>
+                            <td> <input type="text" class="form-control" name="rate" id="rate" placeholder="Enter interest rate eg:7(in %)"></td>
+                        </tr>
+                        <tr>
+                            <th><label for="time">Time:</label></th>
+                            <td><input type="text" class="form-control" name="time" id="time" placeholder="Enter time in years"></td>
+                        </tr>
+                        <tr>
+                            <th><label for="SI">Simple Interest:</label></th>
+                            <td><input type="text" class="form-control" id="SI" name="sim" placeholder="result"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="text-align: center;"><input type="button" class="button"  value="Calculate SI" onclick="calc(this.form)"></td>
+                        </tr>
+                    </table>
+                </form>
+                </div>
+            </div>
+
+            <div class=" col-sm-7 col-md-6 col-lg-8 ">
+                <h1 class="text-center" style="font-family: ARIAL NARROW;">Formula</h1>
+                <div class="main2 p-2 bg-img ">
+            <div class="info m-5 p-1">
+                <h3>The formula to calculate Simple Interest is:</h3>
+                <h4 class="text-center"><span style="background-color: coral;" class="p-1">(P x R x T)/100</span></h4>
+            </div>
+            <div class="info m-5 p-1">
+                <h3>Or if the rate is converted to decimal from %, then the Simple Interest is:</h3>
+                <h4 class="text-center"><span style="background-color: coral;" class="p-1">P x R x T</span></h4>
+            </div>
+            <div class="info m-5 p-1">
+                <h3>Where:</h3>
+                <ul>
+                    <li>P is the principal amount</li>
+                    <li>R is the interest rate</li>
+                    <li>T is the time involved in years</li>
+                </ul>
+            </div>
+            <div class="info m-5 p-1">
+                    <h3>Example</h3>
+                    <p>Ariel takes a loan of $8,000 to buy a used truck at the rate of 9 % simple Interest.Calculate the annual interest to be paid for the loan amount.</p>
+                    <h5>Solution:</h5>
+                    <pre class="text-light">From the details given in the problem Principle = P = $8,000 and R = 9% or 0.09 expressed as a decimal.
+As the annual Interest is to be calculated, the time period T =1.
+Plugging these values in the simple Interest formula,
+I = P x T x R
+= 8,000 x 1 x 0.09
+= 720.00</pre>
+                    <h5 class="text-center">Annual Interest to be paid = $720</h5>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+</body>
+</html>
